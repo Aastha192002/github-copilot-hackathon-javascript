@@ -5,17 +5,15 @@ const trans = document.querySelector("#trans");
 const form = document.querySelector("#form");
 const description = document.querySelector("#desc");
 const amount = document.querySelector("#amount");
-/*
-const dummyData = [
-  { id: 1, description: "Flower", amount: -20 },
-  { id: 2, description: "Salary", amount: 35000 },
-  { id: 3, description: "Book", amount: 10 },
-  { id: 4, description: "Camera", amount: -150 },
-  { id: 5, description: "Petrol", amount: -250 },
-];
-
-let transactions = dummyData;
-*/
+// const today = new Date();
+// var dd = String(today.getDate()).padStart(2, '0');
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var yyyy = today.getFullYear();
+let currentDate = new Date();
+let cDay = currentDate.getDate();
+let cMonth = currentDate.getMonth() + 1;
+let cYear = currentDate.getFullYear();
+let d="<b>" + cDay + "/" + cMonth + "/" + cYear + "</b>";
 
 const localStorageTrans = JSON.parse(localStorage.getItem("trans"));
 let transactions = localStorage.getItem("trans") !== null ? localStorageTrans : [];
@@ -26,6 +24,7 @@ function loadTransactionDetails(transaction) {
     item.classList.add(transaction.amount < 0 ? "exp" : "inc");
     item.innerHTML = `
     ${transaction.description}
+    ${d}
     <span>${sign} ${Math.abs(transaction.amount)}</span>
     <button class="btn-del" onclick="removeTrans(${transaction.id})">x</button>
   `;
@@ -70,10 +69,12 @@ function addTransaction(e) {
     e.preventDefault();
     if (description.value.trim() == "" || amount.value.trim() == "") {
         alert("Please Enter Description and amount");
-    } else {
+    } 
+    else {
         const transaction = {
             id: uniqueId(),
             description: description.value,
+            date: currentDate,
             amount: +amount.value,
         };
         transactions.push(transaction);
