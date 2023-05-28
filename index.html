@@ -35,6 +35,14 @@
                     <label for="amount">Amount</label>
                     <input type="number" name="amount" id="amount" placeholder="Amount" />
                 </div>
+
+                <div class="form-control">
+                    <label for="type">Transaction Type</label>
+                    <select id="trans-type" placeholder="Select the transaction type">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
                 <button class="btn" type="submit">Add Transaction</button>
             </form>
         </div>
@@ -43,19 +51,16 @@
             <ul class="trans" id="trans">
                 <li class="exp">
                     Insurance
-                    <span>Date</span>
                     <span>-1500</span>
                     <button class="btn-del">x</button>
                 </li>
                 <li class="inc">
                     Salary
-                    <span>Date</span>
                     <span>35000</span>
                     <button class="btn-del">x</button>
                 </li>
                 <li class="exp">
                     Food
-                    <span>Date</span>
                     <span>-350</span>
                     <button class="btn-del">x</button>
                 </li>
