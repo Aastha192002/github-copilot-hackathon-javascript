@@ -33,7 +33,7 @@ function loadTransactionDetails(transaction) {
 }
 
 function removeTrans(id) {
-    if (confirm("Are you sure you want to delete Transcation?")) {
+    if (confirm("Are you sure you want to delete this transcation?")) {
         transactions = transactions.filter((transaction) => transaction.id != id);
         config();
         updateLocalStorage();
