@@ -12,16 +12,16 @@
 <body>
     <div class="container">
         <div class="ledger">
-            <h2>Income Expense Tracker</h2>
-            <h4>Your Balance</h4>
+            <h2><b>Personal Finance Tracker</b></h2>
+            <h4 id ="bal">Your Balance</h4>
             <h1 id="balance">₹ 0.00</h1>
             <div class="inc-exp-container">
                 <div class="inc">
-                    <h4>Income</h4>
+                    <h4><b>Income</b></h4>
                     <p id="inc-amt" class="amt plus">₹ 0.00</p>
                 </div>
                 <div class="exp">
-                    <h4>Expense</h4>
+                    <h4><b>Expense</b></h4>
                     <p id="exp-amt" class="amt minus">₹ 0.00</p>
                 </div>
             </div>
@@ -33,12 +33,13 @@
 
                 <div class="form-control">
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" id="amount" placeholder="Amount" />
+                    <input type="number" name="amount" id="amount" placeholder="Enter Amount" />
                 </div>
 
                 <div class="form-control">
-                    <label for="type">Transaction Type</label>
-                    <select id="trans-type" placeholder="Select the transaction type">
+                    <label for="type">Transaction Type</label><br>
+                    <select id="trans-type">
+                        <option value="" disabled selected hidden>Select</option>
                         <option value="expense">Expense</option>
                         <option value="income">Income</option>
                     </select>
@@ -47,7 +48,7 @@
             </form>
         </div>
         <div class="transaction">
-            <h3>Transaction Details</h3>
+            <h3><b>Transaction Details</b></h3>
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
             <!-- <select id="sortBy" onchange="sort()">
                 <option value="name">Name</option>
