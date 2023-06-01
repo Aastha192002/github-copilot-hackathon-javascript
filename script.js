@@ -39,7 +39,7 @@ function loadTransactionDetails(transaction) {
 
 //Remove created transactionsusing the unique id
 function removeTrans(id) {
-    if (confirm("Are you sure you want to delete Transcation?")) {
+    if (confirm("Are you sure you want to delete this transcation?")) {
         transactions = transactions.filter((transaction) => transaction.id != id);
         config();
         updateLocalStorage();
@@ -83,7 +83,7 @@ function config() {
 function addTransaction(e) {
     e.preventDefault();
     if (description.value.trim() == "" || amount.value.trim() == "") {
-        alert("Please Enter Description and amount");
+        alert("Please Enter Description and Amount");
     }
     else {
         const transaction = {
