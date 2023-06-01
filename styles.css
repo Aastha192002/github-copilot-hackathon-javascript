@@ -38,6 +38,11 @@ body {
 .ledger h4{
     font-size: larger;
 }
+#bal{
+    font-weight: bold;
+    font-size: 23px;
+
+}
 
 .ledger h2,
 .ledger h4,
@@ -84,6 +89,7 @@ body {
 
 #trans-type{
     width: 80px;
+    height: 35px;
 }
 
 #form {
@@ -101,6 +107,7 @@ label {
     font-size: 18px;
     font-weight: 400;
     color: #2584e2;
+    font-weight: bold;
 }
 
 input[type="text"],
