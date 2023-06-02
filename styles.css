@@ -25,7 +25,7 @@ body {
 }
 
 .ledger {
-    background-color: #2f3542;
+    background-color:#2f3542; 
     padding: 20px;
     flex: 1;
     color: white;
@@ -90,6 +90,9 @@ body {
     border: 3px solid white;
     border-radius: 7px;
 }
+#amount:hover, #desc:hover{
+    background-color: rgb(227, 227, 223);
+}
 
 #trans-type {
     width: 80px;
@@ -125,7 +128,7 @@ input[type="number"] {
     border-radius: 2px;
 }
 
-.btn {
+.btn, #btn1{
     background-color: #2e86de;
     color: white;
     display: block;
@@ -138,6 +141,9 @@ input[type="number"] {
     border-radius: 7px;
     cursor: pointer;
 }
+.btn:hover, #btn1:hover{
+    background-color: #6e9df0;
+}
 
 .transaction {
     flex: 1;
@@ -145,6 +151,26 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+}
+
+#trans-type:hover{
+    background-color: rgb(227, 227, 223);
+}
+
+#sortBy{
+    margin-top: 9px;
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 7px;
+    height: 35px;
+    font-size: 16px;
+}
+#sortBy:hover{
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+#btn1{
+    margin-top: 15px;
+    
 }
 
 .transaction h3 {
