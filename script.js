@@ -6,7 +6,7 @@ const form = document.querySelector("#form");
 const description = document.querySelector("#desc");
 const amount = document.querySelector("#amount");
 const type = document.querySelector('#trans-type');
-// const sortBy = document.querySelector('#sortBy')
+const sortBy = document.querySelector('#sortBy')
 
 // const today = new Date();
 // var dd = String(today.getDate()).padStart(2, '0');
@@ -119,11 +119,92 @@ function updateLocalStorage() {
 }
 
 //Function for sorting the transctions (dropdown)
-// function sort() {
-//     if (sortBy.value == 'name') {
-//         const arr = transactions.map((sort) => sort.description)
-//         arr.sort()
-//         console.log(arr)
-//         loadTransactionDetails(arr)
-//     }
-// }
+function sort() {
+    //function to compare array object values by name
+    function compareByName(a, b) {
+        const name1 = a.description.toUpperCase();
+        const name2 = b.description.toUpperCase();
+
+        let comparison = 0;
+
+        if (name1 > name2) {
+            comparison = 1;
+        } else if (name1 < name2) {
+            comparison = -1;
+        }
+        return comparison;
+    }
+
+    //function to campare array object value by date
+    function compareByDate(a, b) {
+        const year1 = a.date.slice(0, 4);
+        const year2 = b.date.slice(0, 4);
+        const month1 = a.date.slice(5, 7);
+        const month2 = b.date.slice(5, 7);
+        const date1 = a.date.slice(8, 10);
+        const date2 = a.date.slice(8, 10)
+
+        let comparison = 0;
+
+        if (year1 > year2) {
+            comparison = 1;
+        } else if (year1 < year2) {
+            comparison = -1;
+        }
+
+        else if (month1 > month2) {
+            comparison = 1;
+        } else if (month1 < month2) {
+            comparison = -1;
+        }
+
+        else if (date1 > date2) {
+            comparison = 1;
+        } else if (date1 < date2) {
+            comparison = -1;
+        }
+
+        return comparison;
+    }
+
+    //function to compare array object by transaction type
+    function compareByType(a, b) {
+        const type1 = a.type;
+        const type2 = b.type;
+
+        let comparison = 0;
+
+        if (type1 == 'income' && type2 == 'expense')
+            comparison = -1;
+        else if (type1 == 'expense' && type2 == 'income')
+            comparison = 1;
+
+        return comparison;
+    }
+
+    //Common Code
+    const arr = transactions.map((sort) => sort)
+
+    //Sorting by name
+    if (sortBy.value == 'name')
+        arr.sort(compareByName)
+
+    //Sorting by date
+    else if (sortBy.value == 'date')
+        arr.sort(compareByDate)
+
+    //Sorting by transaction type
+    else if (sortBy.value == 'type')
+        arr.sort(compareByType)
+
+    //Rest of the common code
+    console.log(arr)
+    transactions = transactions.filter((transaction) => transaction.id != transaction.id);
+    trans.innerHTML = ""
+    for (var i = 0; i < arr.length; i++) {
+        transactions.push(arr[i])
+        loadTransactionDetails(arr[i]);
+        updateAmount();
+    }
+    updateLocalStorage()
+}

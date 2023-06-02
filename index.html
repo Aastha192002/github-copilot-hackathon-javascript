@@ -13,7 +13,7 @@
     <div class="container">
         <div class="ledger">
             <h2><b>Personal Finance Tracker</b></h2>
-            <h4 id ="bal">Your Balance</h4>
+            <h4 id="bal">Your Balance</h4>
             <h1 id="balance">₹ 0.00</h1>
             <div class="inc-exp-container">
                 <div class="inc">
@@ -50,11 +50,12 @@
         <div class="transaction">
             <h3><b>Transaction Details</b></h3>
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
-            <!-- <select id="sortBy" onchange="sort()">
+            <select id="sortBy" onchange="sort()">
+                <option value="" disabled selected hidden>Select</option>
                 <option value="name">Name</option>
                 <option value="date">Date Created</option>
                 <option value="type">Transaction type</option>
-            </select> -->
+            </select>
             <ul class="trans" id="trans">
                 <li class="exp">
                     Insurance
