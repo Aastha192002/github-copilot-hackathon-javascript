@@ -82,8 +82,8 @@ function config() {
 //function to create new transactions
 function addTransaction(e) {
     e.preventDefault();
-    if (description.value.trim() == "" || amount.value.trim() == "") {
-        alert("Please Enter Description and Amount");
+    if (description.value.trim() == "" || amount.value.trim() == "" || type.value.trim() == "") {
+        alert("Please enter all the fields");
     }
     else {
         const transaction = {
@@ -97,6 +97,7 @@ function addTransaction(e) {
         loadTransactionDetails(transaction);
         description.value = "";
         amount.value = "";
+        type.value = ""
         updateAmount();
         updateLocalStorage();
     }
@@ -185,8 +186,12 @@ function sort() {
     //Common Code
     const arr = transactions.map((sort) => sort)
 
+    //Check for the case where no value is selected
+    if (sortBy.value == "")
+        alert("Please select the required sorting")
+
     //Sorting by name
-    if (sortBy.value == 'name')
+    else if (sortBy.value == 'name')
         arr.sort(compareByName)
 
     //Sorting by date
@@ -207,4 +212,5 @@ function sort() {
         updateAmount();
     }
     updateLocalStorage()
+    sortBy.value = ""
 }
