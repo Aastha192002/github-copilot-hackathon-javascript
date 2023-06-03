@@ -91,6 +91,7 @@ nav>img {
     padding: 5px;
     gap: 10px;
     height: 17rem;
+    border-radius: 3px;
 }
 
 .inc-exp-container div {
@@ -162,6 +163,21 @@ label {
 
 
 }
+#trans-type{
+    display:flex;
+    margin: 10px 0;
+    font-size: 17px;
+    font-family: 'Lobster';
+    border-radius: 3px;
+}
+
+#trans-type option{
+    border-radius: 3px;
+    font-size: 17px;
+    font-family: 'Lobster';
+    padding: 5px 10px;
+    background-color:#1dd1a12f;
+}
 
 input[type="text"],
 input[type="number"] {
@@ -176,6 +192,9 @@ input[type="number"] {
 
 .btn,
 #btn1 {
+    display: inline-flex;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
     background-color: #1dd1a1;
     color: white;
     display: block;
@@ -195,6 +214,7 @@ input[type="number"] {
 .btn:hover,
 #btn1:hover {
     background-color: #6ee97a;
+
 }
 
 .transaction {
@@ -219,7 +239,13 @@ input[type="number"] {
     width: 100px;
     font-family: 'Times New Roman', Times, serif;
 }
-
+#sortBy option{
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 10px;
+    background-color:#1dd1a12f;
+}
 #sortBy:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
