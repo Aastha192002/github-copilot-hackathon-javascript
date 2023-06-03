@@ -25,11 +25,27 @@ img {
     height: 260px;
 }
 
+nav {
+    height: 4.5rem;
+    width: 100%;
+    background-color: #ffffff;
+    padding-left: 0%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px 0;
+}
+
+nav>img {
+    margin: 0 0 0 2%;
+    padding: 0.35% 0 0.35% 0;
+    height: 100%;
+    width: 12%;
+}
+
 .container {
-    width: 50rem;
+    margin-top: 3rem;
+    width: 90%;
     height: 47rem;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 8px 8px 10px 10px;
     display: flex;
     user-select: none;
 }
@@ -40,6 +56,7 @@ img {
     padding: 20px;
     flex: 1;
     color: white;
+    width: 60%;
 }
 
 .ledger h4 {
@@ -73,7 +90,7 @@ img {
     /* display: flex; */
     padding: 5px;
     gap: 10px;
-    height: 16rem;
+    height: 17rem;
 }
 
 .inc-exp-container div {
@@ -96,7 +113,7 @@ img {
     border: 4px solid #1dd1a1;
     color: #1dd1a1;
     font-weight: bold;
-
+    width: 80%;
 }
 
 .inc-exp-container div.exp {
@@ -104,6 +121,7 @@ img {
     color: #ee5253;
     font-weight: bold;
     font-family: 'Satisfy', cursive;
+    width: 80%;
 }
 
 #desc,

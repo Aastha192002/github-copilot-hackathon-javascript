@@ -92,6 +92,7 @@ function removeTrans(id) {
     if (confirm("Are you sure you want to delete this transaction?")) {
         transactions = transactions.filter((transaction) => transaction.id != id);
         config();
+        updateAmount();
         updateLocalStorage();
     } else {
         return;
@@ -147,6 +148,7 @@ function addTransaction(e) {
         description.value = "";
         amount.value = "";
         type.value = "";
+        updateAmount();
         updateLocalStorage();
     }
 }
