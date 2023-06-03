@@ -19,12 +19,25 @@ body {
     background-color: whitesmoke;
     width: 62%;
 } */
-img {
-    margin-left: 40px;
-    width: 300px;
-    height: 260px;
-}
-
+nav {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: inline-flex;
+    align-items: left;
+    position: left;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+  }
 .container {
     width: 50rem;
     height: 47rem;
@@ -40,6 +53,7 @@ img {
     padding: 20px;
     flex: 1;
     color: white;
+    width: 50%;
 }
 
 .ledger h4 {
@@ -257,6 +271,7 @@ input[type="number"] {
     opacity: 0;
 }
 
+
 .trans li:hover .btn-del {
     opacity: 1;
 }
@@ -275,6 +290,38 @@ input[type="number"] {
     height: 30rem;
 }
 
+footer {
+    background-color: #dfe6e9;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a i {
+    margin-right: 5px;
+}
+
+.footer-copyright {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-contact {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
 ::-webkit-scrollbar {
     width: 5px;
 }
