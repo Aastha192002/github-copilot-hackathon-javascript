@@ -10,6 +10,16 @@ const sortBy = document.querySelector("#sortBy");
 const chartContainer = document.querySelector(".chart-container");
 let chart;
 
+// const today = new Date();
+// var dd = String(today.getDate()).padStart(2, '0');
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var yyyy = today.getFullYear();
+let currentDate = new Date();
+let cDay = currentDate.getDate();
+let cMonth = currentDate.getMonth() + 1;
+let cYear = currentDate.getFullYear();
+let d = "<b>" + cDay + "/" + cMonth + "/" + cYear + "</b>";
+
 // Retrieve transactions from localStorage or initialize an empty array
 const localStorageTrans = JSON.parse(localStorage.getItem("trans"));
 let transactions = localStorage.getItem("trans") !== null ? localStorageTrans : [];
@@ -77,7 +87,7 @@ function loadTransactionDetails(transaction) {
     const item = document.createElement("li");
     item.classList.add(transaction.type === "expense" ? "exp" : "inc");
     item.innerHTML = `
-    ${transaction.description}
+    ${transaction.description} ${d}
     <span>${sign} ${Math.abs(transaction.amount)}</span>
     <button class="btn-del" onclick="removeTrans(${transaction.id})">x</button>
   `;
@@ -140,6 +150,7 @@ function addTransaction(e) {
         const transaction = {
             id: uniqueId(),
             description: description.value,
+            date: currentDate,
             amount: +amount.value,
             type: type.value,
         };
@@ -188,10 +199,34 @@ function sort() {
 
     // Function to compare array object value by date
     function compareByDate(a, b) {
-        const date1 = new Date(a.date);
-        const date2 = new Date(b.date);
+        const year1 = a.date.slice(0, 4);
+        const year2 = b.date.slice(0, 4);
+        const month1 = a.date.slice(5, 7);
+        const month2 = b.date.slice(5, 7);
+        const date1 = a.date.slice(8, 10);
+        const date2 = a.date.slice(8, 10)
 
-        return date1 - date2;
+        let comparison = 0;
+
+        if (year1 > year2) {
+            comparison = 1;
+        } else if (year1 < year2) {
+            comparison = -1;
+        }
+
+        else if (month1 > month2) {
+            comparison = 1;
+        } else if (month1 < month2) {
+            comparison = -1;
+        }
+
+        else if (date1 > date2) {
+            comparison = 1;
+        } else if (date1 < date2) {
+            comparison = -1;
+        }
+
+        return comparison;
     }
 
     // Function to compare array object by transaction type
