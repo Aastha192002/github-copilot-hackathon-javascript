@@ -55,13 +55,16 @@
         <div class="transaction">
             <h3>Transaction Details</h3>
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
-            <select id="sortBy">
-                <option value="" disabled selected hidden>Sort by</option>
-                <option value="name">Name</option>
-                <option value="date">Date Created</option>
-                <option value="type">Transaction type</option>
-            </select>
+            <div class="filter-container">
+                <select id="sortBy">
+                    <option value="" disabled selected hidden>Sort by</option>
+                    <option value="name">Name</option>
+                    <option value="date">Date Created</option>
+                    <option value="type">Transaction type</option>
+                </select>
+                
             <button onclick="sort()" id="btn1">Apply</button>
+        </div>
             <ul class="trans" id="trans">
                 <li class="exp">
                     Insurance
