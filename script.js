@@ -292,7 +292,7 @@ function checkFinances() {
     }, 0).toFixed(2);
 
     const totalBalance = `${total}`;
-    console.log(totalBalance);
+    // console.log(totalBalance);
 
     const expense = t
         .filter((item) => item.type == 'expense')
@@ -300,7 +300,9 @@ function checkFinances() {
         .toFixed(2);
     const expenses = `${expense}`;
 
-    if (expenses > totalBalance || expenses > income) {
+    console.log(expenses, income, totalBalance, expenses > income)
+    //  totalBalance
+    if (expenses > income) {
         const myDiv = document.createElement('div');
 
         myDiv.innerHTML = 'Warning: Your expenses are exceeding your income! Consider reviewing your spending and finding ways to reduce expenses!';
