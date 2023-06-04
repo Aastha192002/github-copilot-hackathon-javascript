@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-l7GEkC9x5fGGC8WsqnMF6c7E7i7KoyF0Hg07XfINq8d39q0bqgh3NtG0NBR5Ljnus5/Z5BGFzfsJ7ke9pvf29g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-l7GEkC9x5fGGC8WsqnMF6c7E7i7KoyF0Hg07XfINq8d39q0bqgh3NtG0NBR5Ljnus5/Z5BGFzfsJ7ke9pvf29g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <body>
     <nav>
         <img src="logo2.png">
@@ -57,8 +59,11 @@
             <div class="chart-container">
                 <canvas id="chart"></canvas>
             </div>
+
+            <br>
+            <br>
             <h3>Transaction Details</h3>
-            
+
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
             <div class="filter-container">
                 <select id="sortBy">
@@ -68,8 +73,8 @@
                     <option value="type">Transaction type</option>
                 </select>
 
-            <button onclick="sort()" id="btn1">Apply</button>
-        </div>
+                <button onclick="sort()" id="btn1">Apply</button>
+            </div>
             <ul class="trans" id="trans">
                 <li class="exp">
                     Insurance
@@ -87,9 +92,9 @@
                     <button class="btn-del">x</button>
                 </li>
             </ul>
-            
         </div>
-      
+    </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -98,22 +103,22 @@
     <footer>
         <!-- Social media links -->
         <div class="footer-links">
-          <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
-          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
-          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
-          <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
         </div>
-    
+
         <!-- Copyright -->
         <div class="footer-copyright">
-          &copy; 2023 FinOlio. All rights reserved.
+            &copy; 2023 FinOlio. All rights reserved.
         </div>
-    
+
         <!-- Contact details -->
         <div class="footer-contact">
-          <i class="fas fa-phone-alt"></i>Contact us: +12 6749639308
+            <i class="fas fa-phone-alt"></i>Contact us: +12 6749639308
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>

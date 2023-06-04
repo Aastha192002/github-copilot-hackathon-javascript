@@ -349,10 +349,10 @@ input[type="number"] {
 
 footer {
     margin-top: 30px;
-    background-color: #dfe6e9;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
-    color: #333;
+    color: #9c9c9c;
     width:100%;
 
 }
@@ -362,9 +362,11 @@ footer {
 }
 
 .footer-links a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
+    font-family: "sans-serrif";
+    font-weight: 100;
 }
 
 .footer-links a i {
@@ -379,7 +381,7 @@ footer {
 
 .footer-contact {
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
     font-weight: bold;
 }
 ::-webkit-scrollbar {
