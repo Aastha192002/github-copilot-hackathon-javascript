@@ -365,6 +365,8 @@ footer {
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
+    font-family: "sans-serrif";
+    font-weight: 100;
 }
 
 .footer-links a i {
