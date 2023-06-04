@@ -52,8 +52,13 @@
                 <button class="btn" type="submit">Add Transaction</button>
             </form>
         </div>
+
         <div class="transaction">
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
             <h3>Transaction Details</h3>
+            
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
             <div class="filter-container">
                 <select id="sortBy">
@@ -82,11 +87,11 @@
                     <button class="btn-del">x</button>
                 </li>
             </ul>
+            
         </div>
+      
     </div>
-    <div class="chart-container">
-        <canvas id="chart"></canvas>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 

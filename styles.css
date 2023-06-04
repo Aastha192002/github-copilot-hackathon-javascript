@@ -252,7 +252,7 @@ input[type="number"] {
 
 .filter-container select {
     margin-right: 50px;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 #sortBy {
@@ -348,10 +348,13 @@ input[type="number"] {
 }
 
 footer {
+    margin-top: 30px;
     background-color: #dfe6e9;
     padding: 20px;
     text-align: center;
     color: #333;
+    width:100%;
+
 }
 
 .footer-links {
@@ -366,6 +369,10 @@ footer {
 
 .footer-links a i {
     margin-right: 5px;
+}
+
+.footer-links .fab fa-facebook-f{
+    color:#2584e2;
 }
 
 .footer-copyright {
