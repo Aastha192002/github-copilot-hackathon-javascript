@@ -263,7 +263,7 @@ input[type="number"] {
 
 .filter-container select {
     margin-right: 50px;
-    margin-left: 120px;
+    margin-left: 90px;
 }
 
 #sortBy {
@@ -296,7 +296,7 @@ input[type="number"] {
     border-bottom: 1px solid #f1f1f1;
     margin-top: 36px;
     margin-bottom: 5px;
-    margin-left: 180px;
+    margin-left: 120px;
     font-size: 25px;
     font-family: 'Lobster';
 }
@@ -355,15 +355,16 @@ input[type="number"] {
 .chart-container {
     width: 60%;
     height: 30rem;
+    margin-left: 100px;
 }
 
 footer {
     margin-top: 30px;
     border: 1px solid white;
-   background-color: rgb(231, 231, 231);
+   background-color: rgb(44, 43, 43);
     padding: 20px;
     text-align: center;
-    color: #333;
+    color: #c2c1c1;
     height: 210px;
     width:100%;
 
@@ -374,7 +375,7 @@ footer {
 }
 
 .footer-links a {
-    color: rgb(94, 94, 245);
+    color: rgb(166, 166, 240);
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
@@ -397,7 +398,7 @@ footer {
 
 .footer-contact {
     font-size: 24px;
-    color: #555;
+    color: #ffffff;
     font-weight: bold;
 }
 ::-webkit-scrollbar {
