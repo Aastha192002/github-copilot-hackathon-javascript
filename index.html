@@ -7,13 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@300&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
+
 <body>
     <nav>
         <img src="logo2.png">
     </nav>
-
     <div class="container">
         <div class="ledger">
             <h4 id="bal">Your Balance</h4>
@@ -58,7 +64,7 @@
                 <canvas id="chart"></canvas>
             </div>
             <h3>Transaction Details</h3>
-            
+
             <!-- Filter Dropdown (Sort be name, date, transaction type) -->
             <div class="filter-container">
                 <select id="sortBy">
@@ -68,8 +74,8 @@
                     <option value="type">Transaction type</option>
                 </select>
 
-            <button onclick="sort()" id="btn1">Apply</button>
-        </div>
+                <button onclick="sort()" id="btn1">Apply</button>
+            </div>
             <ul class="trans" id="trans">
                 <li class="exp">
                     Insurance
@@ -87,9 +93,9 @@
                     <button class="btn-del">x</button>
                 </li>
             </ul>
-            
+
         </div>
-      
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -98,22 +104,22 @@
     <footer>
         <!-- Social media links -->
         <div class="footer-links">
-          <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a>
-          <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i>Twitter</a>
-          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
-          <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i>Twitter</a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
         </div>
-    
-        <!-- Copyright -->
-        <div class="footer-copyright">
-          &copy; 2023 FinOlio. All rights reserved.
-        </div>
-    
+
         <!-- Contact details -->
         <div class="footer-contact">
-          <i class="fas fa-phone-alt"></i>   Contact us: +12 6749639308
+            <i class="fas fa-phone-alt"></i> Contact us: +12 6749639308
         </div>
-      </footer>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            &copy; 2023 FinOlio. All rights reserved.
+        </div>
+    </footer>
 </body>
 
 </html>
