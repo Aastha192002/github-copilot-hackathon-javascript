@@ -8,6 +8,7 @@ const amount = document.querySelector("#amount");
 const type = document.querySelector("#trans-type");
 const sortBy = document.querySelector("#sortBy");
 const chartContainer = document.querySelector(".chart-container");
+const mySec = document.querySelector(".recommend")
 let chart;
 
 // const today = new Date();
@@ -129,6 +130,8 @@ function updateAmount() {
         .reduce((acc, item) => (acc += item.amount), 0)
         .toFixed(2);
     exp_amt.innerHTML = `₹  ${Math.abs(expense)}`;
+
+    checkFinances();
 }
 
 // Show every new transaction in the display pane
@@ -263,4 +266,57 @@ function sort() {
     updateLocalStorage();
 
     sortBy.value = "";
+}
+
+
+//Recommendation system
+function checkFinances() {
+    while (mySec.firstChild)
+        mySec.removeChild(mySec.firstChild);
+
+    const t = transactions.map((transaction) => transaction);
+
+    const incomes = t
+        .filter((item) => item.type == 'income')
+        .reduce((acc, item) => (acc += item.amount), 0)
+        .toFixed(2);
+
+    const income = `${incomes}`;
+
+
+    const total = t.reduce((acc, item) => {
+        if (item.type == 'expense')
+            return acc - item.amount
+        else
+            return acc + item.amount
+    }, 0).toFixed(2);
+
+    const totalBalance = `${total}`;
+    console.log(totalBalance);
+
+    const expense = t
+        .filter((item) => item.type == 'expense')
+        .reduce((acc, item) => (acc += item.amount), 0)
+        .toFixed(2);
+    const expenses = `${expense}`;
+
+    if (expenses > totalBalance || expenses > income) {
+        const myDiv = document.createElement('div');
+
+        myDiv.innerHTML = 'Warning: Your expenses are exceeding your income! Consider reviewing your spending and finding ways to reduce expenses!';
+        myDiv.style.color = "red";
+        myDiv.style.border = "3px solid red";
+
+        mySec.appendChild(myDiv);
+    }
+
+    if (totalBalance > 1000 && income > expenses) {
+        const myDiv = document.createElement('div');
+
+        myDiv.innerHTML = "You saved well this time! Keep up the good spirit of saving!!";
+        myDiv.style.color = "green";
+        myDiv.style.border = "3px solid green";
+
+        mySec.appendChild(myDiv);
+    }
 }
