@@ -99,8 +99,8 @@ nav>img {
 
 .inc-exp-container {
     /* display: flex; */
-    padding: 3px;
-    gap: 9px;
+    padding: 5px;
+    gap: 10px;
     height: 17rem;
     border-radius: 3px;
     /* margin-left: 90px; */
@@ -163,7 +163,7 @@ nav>img {
 }
 
 #form {
-    padding: 1px;
+    padding: 5px;
     margin-top: 35px;
     display: flex;
     flex-direction: column;
@@ -178,7 +178,7 @@ nav>img {
 label {
     display: inline-block;
     margin: 10px 0;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 560;
     color: #2584e2;
     /* font-family: 'Lobster'; */
@@ -224,7 +224,7 @@ input[type="number"] {
     background-color: #1dd1a1;
     color: white;
     display: block;
-    margin-top: 10px;
+    margin-top: 46px;
     padding: 10px;
     font-size: 16px;
     border: 0;
@@ -276,7 +276,7 @@ input[type="number"] {
 }
 
 .filter-container select {
-    margin-right: 50px;
+     margin-right: 50px;
 }
 
 #sortBy {
@@ -369,12 +369,12 @@ input[type="number"] {
 
 .chart-container {
     width: 100%;
-    min-height: 30rem;
+    height: 30rem;
     margin-left: 0;
 }
 
 footer {
-    margin: 2px;
+    margin-top: 4rem;
     border: 1px solid white;
     /* background-color: rgb(231, 231, 231); */
     background-color: #333;
@@ -386,7 +386,7 @@ footer {
 }
 
 .footer-links {
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
 }
 
 .footer-links a {
@@ -397,7 +397,7 @@ footer {
     /* font-weight: 0; */
     font-style: italic;
     font-family: 'Encode Sans Semi Condensed', sans-serif;
-    margin: 0 20px;
+    margin: 0 50px;
 }
 
 .footer-links a:hover {
@@ -410,7 +410,7 @@ footer {
 }
 
 .footer-copyright {
-    margin-top: 5px;
+    /* margin-top: 10px; */
     /* font-size: 25px; */
     font-weight: bold;
     color: #555;
