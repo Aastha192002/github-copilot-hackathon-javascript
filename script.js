@@ -302,7 +302,7 @@ function checkFinances() {
 
     console.log(expenses, income, totalBalance, expenses > income)
     //  totalBalance
-    if (expenses > income) {
+    if (totalBalance < 0) {
         const myDiv = document.createElement('div');
 
         myDiv.innerHTML = 'Warning: Your expenses are exceeding your income! Consider reviewing your spending and finding ways to reduce expenses!';
@@ -312,7 +312,7 @@ function checkFinances() {
         mySec.appendChild(myDiv);
     }
 
-    if (totalBalance > 1000 && income > expenses) {
+    if (totalBalance > 1000) {
         const myDiv = document.createElement('div');
 
         myDiv.innerHTML = "You saved well this time! Keep up the good spirit of saving!!";
